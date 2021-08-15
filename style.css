@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
+:root {
+  /* Theme 1 */
+  --main-grey: hsl(222, 26%, 31%);
+  --mid-grey: hsl(223, 31%, 20%);
+  --dark-grey: hsl(224, 36%, 15%);
+  --light-grey: hsl(225, 21%, 49%);
+  --grey: hsl(224, 28%, 35%);
+  --orange: hsl(6, 63%, 50%);
+  --dark-orange: hsl(6, 70%, 34%);
+  --light-beige: hsl(30, 25%, 89%);
+  --beige: hsl(28, 16%, 65%);
+  --text-grayish-blue: hsl(221, 14%, 31%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+}
+html {
+  height: 100%;
+}
+body {
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+  position: relative;
+  font-size: 32px;
+  font-family: "Spartan", sans-serif;
+  background-color: var(--main-grey);
+}
+.calc-container {
+  width: 32%;
+  height: auto;
+  position: absolute;
+  top: 10%;
+}
+.calc-header {
+  min-width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+.calc-title-container {
+  min-width: 60%;
+}
+.calc-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 36px;
+  text-align: center;
+  letter-spacing: -0.533333px;
+  color: white;
+}
+.calc-theme-box {
+  min-width: 40%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.theme-title-container {
+  min-width: 60%;
+  height: auto;
+  padding-top: 10px;
+  padding-left: 23%;
+}
+.theme {
+  height: auto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 13px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: white;
+}
+.theme-numbers-slider {
+  min-width: 40%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.numbers {
+  padding-bottom: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.t-number {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 13px;
+  text-align: center;
+  color: white;
+}
+
+.custom-slider {
+  cursor: pointer;
+  -webkit-appearance: none;
+  height: 20px;
+  padding: 4px;
+  border-radius: 10px;
+  background-color: var(--mid-grey);
+}
+
+.custom-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50% !important;
+  background-color: var(--dark-orange);
+}
+
+.calc-result-box {
+  min-width: 100%;
+  height: 100px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: var(--dark-grey);
+  border-radius: 10px;
+}
+.result {
+  padding: 30px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 54px;
+  text-align: right;
+  letter-spacing: -0.8px;
+  color: white;
+  overflow-x: scroll;
+  /* direction: rtl; */
+}
+.result::-webkit-scrollbar {
+  width: 0.1em;
+  height: 0.1em;
+}
+.result::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+.calc-keyboard-box {
+  min-width: 100%;
+  height: auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--mid-grey);
+}
+.calc-grid {
+  min-width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+.number-btn {
+  min-width: 20px;
+  height: 10px;
+  padding: 25px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 6px 2px -2px var(--beige);
+  background-color: var(--light-beige);
+}
+.c-number {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.533333px;
+  color: var(--text-grayish-blue);
+}
+.del,
+.reset {
+  box-shadow: 0 6px 2px -2px var(--grey);
+  background-color: var(--light-grey);
+}
+.equal,
+.reset {
+  grid-column: span 2 !important;
+}
+.equal {
+  box-shadow: 0 6px 2px -2px var(--dark-orange);
+  background-color: var(--orange);
+}
+
+.diff-btn {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.333333px;
+  color: white;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 320px) {
+  .calc-container {
+    width: 100%;
+    top: 5%;
+    padding: 15px;
+  }
+  .calc-title-container {
+    min-width: 50%;
+  }
+  .calc-theme-box {
+    min-width: 50%;
+  }
+  .result {
+    font-size: 38px;
+  }
+}

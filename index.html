@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style data="test" type="text/css"></style>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link href="./style.css" rel="stylesheet" />
+    <title>Calculator App</title>
+  </head>
+  <body>
+    <div class="calc-container">
+      <div class="calc-header">
+        <div class="calc-title-container">
+          <span class="calc-title" id="calc-title">calc</span>
+        </div>
+        <div class="calc-theme-box">
+          <div class="theme-title-container">
+            <span class="theme" id="theme">theme</span>
+          </div>
+          <div class="theme-numbers-slider">
+            <div class="numbers">
+              <span class="t-number">1</span>
+              <span class="t-number">2</span>
+              <span class="t-number">3</span>
+            </div>
+            <input
+              type="range"
+              min="0"
+              max="2"
+              value="0"
+              class="custom-slider"
+              id="theme-slider"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="calc-result-box" id="calc-result-box">
+        <h1 class="result" id="result">0</h1>
+      </div>
+      <div class="calc-keyboard-box" id="calc-keyboard-box">
+        <div class="calc-grid">
+          <button class="number-btn">
+            <span class="c-number">7</span>
+          </button>
+          <button class="number-btn">
+            <span class="c-number">8</span>
+          </button>
+          <button class="number-btn">
+            <span class="c-number">9</span>
+          </button>
+          <button class="number-btn del" id="del">
+            <span class="c-number diff-btn">DEL</span>
+          </button>
+          <button class="number-btn">
+            <span class="c-number">4</span>
+          </button>
+          <button class="number-btn">
+            <span class="c-number">5</span>
+          </button>
+          <button class="number-btn">
+            <span class="c-number">6</span>
+          </button>
+          <button class="number-btn">
+            <span class="c-number">+</span>
+          </button>
+          <button class="number-btn">
+            <span class="c-number">1</span>
+          </button>
+          <button class="number-btn">
+            <span class="c-number">2</span>
+          </button>
+          <button class="number-btn">
+            <span class="c-number">3</span>
+          </button>
+          <button class="number-btn">
+            <span class="c-number">-</span>
+          </button>
+          <button class="number-btn">
+            <span class="c-number">.</span>
+          </button>
+          <button class="number-btn">
+            <span class="c-number">0</span>
+          </button>
+          <button class="number-btn">
+            <span class="c-number">/</span>
+          </button>
+          <button class="number-btn">
+            <span class="c-number">x</span>
+          </button>
+          <button class="number-btn reset" id="reset">
+            <span class="c-number diff-btn">RESET</span>
+          </button>
+          <button class="number-btn equal" id="equal">
+            <span class="c-number diff-btn">=</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
